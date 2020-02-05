@@ -1,0 +1,28 @@
+{
+  "name": "puppeteer-har-server",
+  "version": "1.0.0",
+  "description": "Exposes puppeteer-har over a REST interface",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node lib/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/appfolio/puppeteer-har-server.git"
+  },
+  "author": "AppFolio Engineering",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/appfolio/puppeteer-har-server/issues"
+  },
+  "homepage": "https://github.com/appfolio/puppeteer-har-server#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "puppeteer-core": "^1.11.0",
+    "puppeteer-har": "^1.1.2"
+  }
+}
