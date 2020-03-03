@@ -12,7 +12,11 @@ This project was developed as a way to capture HTTP traffic during automated acc
 npm start
 ```
 
-This exposes a server running on port 3000.
+This exposes a server running on port 3000. If you'd like to use a different port, specify it using the `PORT` environment variable.
+
+```
+PORT=8080 npm start
+```
 
 ## API Documentation
 
