@@ -26,7 +26,10 @@
     "puppeteer-har": "^1.1.2"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
     "husky": "^4.2.3",
+    "mocha": "^7.1.0",
     "prettier": "1.19.1",
     "pretty-quick": "^2.0.1"
   },
