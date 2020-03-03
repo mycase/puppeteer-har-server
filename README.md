@@ -49,3 +49,11 @@ curl -X DELETE http://localhost:3000/har-sessions/3
 ```
 {"log":{"version":1.2",...
 ```
+
+## Running tests
+
+To run tests for this project, execute `npm test`. Integration tests drive a real instance of Chromium, but it is headless by default. To use a non-headless instance of Chromium during test execution, use the `CHROME_DEBUG` environment variable.
+
+```
+CHROME_DEBUG=1 npm test
+```
