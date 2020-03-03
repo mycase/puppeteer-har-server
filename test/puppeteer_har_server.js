@@ -94,5 +94,20 @@ describe("PuppeteerHARServer", () => {
 
       await stopServer(server);
     });
+
+    it("should return a HAR if the session was successfully deleted", async () => {
+      const server = startServer({
+        stopSession(sessionId) {
+          return { log: "hardeehar" };
+        }
+      });
+      const client = new PuppeteerHarServerTestClient(server);
+
+      const response = await client.destroyHarSession("234234");
+      response.should.have.status(200);
+      response.body.should.deep.equal({ log: "hardeehar" });
+
+      await stopServer(server);
+    });
   });
 });
