@@ -26,7 +26,7 @@ function stopServer(server) {
 
 describe("PuppeteerHARServer", () => {
   describe("POST /har-sessions", () => {
-    it("should return 400 browserURL is unspecified", async () => {
+    it("should return 400 if browserURL is unspecified", async () => {
       const server = startServer();
       const client = new PuppeteerHarServerTestClient(server);
 
@@ -37,7 +37,7 @@ describe("PuppeteerHARServer", () => {
       await stopServer(server);
     });
 
-    it("should return 500 if unexpected error occurs when creating session", async () => {
+    it("should return 500 if session creation fails with unexpected error", async () => {
       const server = startServer({
         startSession(browserURL) {
           throw new Error("Unexpected error");
@@ -52,7 +52,7 @@ describe("PuppeteerHARServer", () => {
       await stopServer(server);
     });
 
-    it("should return session ID as string if session starts successfully", async () => {
+    it("should return session ID as string if the session was successfully created", async () => {
       const server = startServer({
         startSession(browserURL) {
           return 42;
