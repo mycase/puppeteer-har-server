@@ -48,20 +48,20 @@ describe("PuppeteerHARServer", () => {
 
   it("should record a HAR", async () => {
     const browserURL = `http://localhost:${CHROME_RDP_PORT}`;
-    const createRes = await testClient.createHarSession(browserURL);
-    createRes.should.have.status(201);
+    const createResponse = await testClient.createHarSession(browserURL);
+    createResponse.should.have.status(201);
 
-    const { sessionId } = createRes.body;
+    const { sessionId } = createResponse.body;
 
     const pages = await browser.pages();
     const currentPage = pages[0];
     const testAppUrl = `http://localhost:${TEST_APP_PORT}/`;
     await currentPage.goto(testAppUrl);
 
-    const destroyRes = await testClient.destroyHarSession(sessionId);
-    destroyRes.should.have.status(200);
+    const destroyResponse = await testClient.destroyHarSession(sessionId);
+    destroyResponse.should.have.status(200);
 
-    const har = destroyRes.body;
+    const har = destroyResponse.body;
     const harEntry = har.log.entries[0];
 
     harEntry.request.method.should.equal("GET");
