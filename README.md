@@ -38,7 +38,7 @@ curl -d '{"browserURL":"http://localhost:9222"}' -H "Content-Type: application/j
 
 ### `DELETE /har-sessions/:sessionId`
 
-Accepts a `sessionId` in the `path`. Returns a JSON-encoded response body, containing a HTTP Archive (HAR) with all of the requests from the recording.
+Accepts a `sessionId` in the `path`. Returns a JSON-encoded response body, containing an HTTP Archive (HAR) with all of the requests from the recording.
 
 #### Example
 
