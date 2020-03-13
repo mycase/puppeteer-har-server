@@ -21,10 +21,9 @@ describe("PuppeteerHARServer", () => {
   let testClient;
 
   beforeEach(async () => {
-    const harServer = new PuppeteerHARServer({
+    puppeteerHARServer = new PuppeteerHARServer({
       port: PUPPETEER_HAR_SERVER_PORT
-    });
-    puppeteerHARServer = harServer.start();
+    }).start();
     testClient = new PuppeteerHarServerTestClient(puppeteerHARServer);
 
     const testApp = express();
