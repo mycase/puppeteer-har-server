@@ -67,5 +67,5 @@ describe("PuppeteerHARServer", () => {
     harEntry.request.method.should.equal("GET");
     harEntry.request.url.should.equal(testAppUrl);
     harEntry.response.status.should.equal(200);
-  }).timeout(10000);
+  });
 });
