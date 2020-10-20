@@ -14,7 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/appfolio/puppeteer-har-server.git"
   },
-  "author": "AppFolio Engineering",
+  "author": "MyCase Engineering",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/appfolio/puppeteer-har-server/issues"
