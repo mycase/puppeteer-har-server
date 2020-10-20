@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/appfolio/puppeteer-har-server.git"
+    "url": "git+https://github.com/mycase/puppeteer-har-server.git"
   },
-  "author": "AppFolio Engineering",
+  "author": "MyCase Engineering",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/appfolio/puppeteer-har-server/issues"
+    "url": "https://github.com/mycase/puppeteer-har-server/issues"
   },
-  "homepage": "https://github.com/appfolio/puppeteer-har-server#readme",
+  "homepage": "https://github.com/mycase/puppeteer-har-server#readme",
   "dependencies": {
     "express": "^4.17.1",
     "puppeteer-core": "^1.11.0",
