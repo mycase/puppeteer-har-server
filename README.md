@@ -1,10 +1,10 @@
 # puppeteer-har-server
 
-This project exposes functionality offered by [`puppeteer-har`][0] over an HTTP
+This project exposes functionality offered by [`puppeteer-har`] over an HTTP
 interface. With it, you can start recording HTTP traffic on a running instance
 of Chrome and retrieve that HTTP traffic as an HTTP archive (`.har`).
 
-[0]: https://github.com/Everettss/puppeteer-har
+[`puppeteer-har`]: https://github.com/Everettss/puppeteer-har
 
 This project was developed as a way to capture HTTP traffic during automated
 acceptance testing. You can configure your tests to start Chrome with
